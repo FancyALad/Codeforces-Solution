@@ -27,26 +27,22 @@ def solve():
                 x = stk.pop()
                 for y in g[x]:
                     if y >= 0:
-                        if vis[y] == vis[x]:
-                            continue
-                        elif vis[y] == -1:
+                        if vis[y] == -1:
                             stk.append(y)
                             vis[y] = vis[x]
+                            if vis[y] == 1: cnt1 += 1
                         elif vis[y] != vis[x]:
                             flag = False
                             return
-                        if vis[y] == 1: cnt1 += 1
                     else:
                         y = ~y
-                        if vis[y] == vis[x] ^ 1:
-                            continue
-                        elif vis[y] == -1:
+                        if vis[y] == -1:
                             stk.append(y)
                             vis[y] = vis[x] ^ 1
+                            if vis[y] == 1: cnt1 += 1
                         elif vis[y] == vis[x]:
                             flag = False
                             return
-                        if vis[y] == 1: cnt1 += 1
             ans += max(cnt - cnt1, cnt1)
 
     chk()
