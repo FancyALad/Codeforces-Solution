@@ -1,3 +1,4 @@
+# submission link: https://codeforces.com/contest/1372/submission/271860753
 from math import sqrt
 import sys
 input = lambda: sys.stdin.readline().strip()
