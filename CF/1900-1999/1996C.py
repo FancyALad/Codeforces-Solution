@@ -1,3 +1,5 @@
+# submission link: https://codeforces.com/contest/1996/submission/272801744
+
 import sys
 input = lambda: sys.stdin.readline().strip()
 
